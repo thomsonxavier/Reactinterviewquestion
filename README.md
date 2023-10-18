@@ -1,309 +1,126 @@
 
 
-1. **Explain React and its core features.**
-   - React is an open-source JavaScript library for building user interfaces. Key features include a virtual DOM, component-based architecture, JSX, and efficient updates.
+1. **What is React, and why is it popular?**
+   - React is a JavaScript library for building user interfaces. It's popular because of its component-based architecture, virtual DOM, and the ability to create dynamic and fast single-page applications.
 
-2. **What is the key difference between functional and class components in React?**
-   - Functional components are simple functions, while class components use ES6 classes. Functional components are typically stateless, but hooks can manage state.
+2. **What is JSX in React?**
+   - JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files. React components use JSX for rendering.
 
-3. **How does React Router work, and why is it important?**
-   - React Router is a library for handling routing in React applications, enabling the creation of single-page applications with multiple views.
+3. **Explain the key differences between React class components and functional components.**
+   - Class components use the `class` keyword, have lifecycle methods, and handle local state. Functional components are simpler, use functions, and can use Hooks for state management.
 
-4. **What is JSX, and how does it differ from HTML?**
-   - JSX (JavaScript XML) is a syntax extension for JavaScript that resembles HTML. JSX is transpiled to JavaScript by tools like Babel.
+4. **What are Hooks in React?**
+   - Hooks are functions that let you "hook into" React state and lifecycle features from functional components. They were introduced in React 16.8 to manage state and side effects in functional components.
 
-5. **How do you manage state in a React component?**
-   - Use the `useState` hook in functional components or initialize state in class components and use `this.setState`.
+5. **How does the virtual DOM work in React?**
+   - The virtual DOM is a lightweight copy of the actual DOM. React uses it to efficiently update the real DOM by minimizing changes and re-renders.
 
-6. **What are props in React, and how are they used?**
-   - Props are short for properties and are used for passing data from parent to child components. They are accessed as function arguments in functional components and via `this.props` in class components.
+6. **What are props in React, and how do you pass data between components?**
+   - Props (short for properties) are used for passing data from parent to child components. Data is passed as attributes and is immutable within the child component.
 
-7. **Discuss the React component lifecycle.**
-   - The component lifecycle includes mounting, updating, and unmounting phases. Key methods are `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
+7. **What is state in React?**
+   - State is an object that stores component-specific data that can be changed over time. It is used to manage and render dynamic data.
 
-8. **How do you handle events in React?**
-   - Attach event handlers to elements using attributes like `onClick`. Define event handler functions in the component to respond to events.
+8. **Explain the component lifecycle in React.**
+   - React class components have three main phases: Mounting, Updating, and Unmounting. Hooks in functional components provide similar capabilities.
 
-9. **What is Redux, and when should it be used?**
-   - Redux is a state management library for complex applications. It is useful when managing global application state or when sharing data between components.
+9. **What is a controlled component in React?**
+   - A controlled component is a component where form elements, like input or textarea, have their value controlled by the state of a React component. 
 
-10. **Explain the concept of higher-order components (HOCs) in React.**
-    - HOCs are functions that take a component and return a new enhanced component. They are used for code reuse, cross-cutting concerns, and component composition.
+10. **What is a higher-order component (HOC)?**
+    - A higher-order component is a function that takes a component and returns a new component with additional props or behavior.
 
-11. **What is the purpose of context in React, and when is it useful?**
-    - Context provides a way to pass data through the component tree without prop drilling. It is useful for sharing data needed by many components at different levels.
+11. **What is the purpose of the `key` prop in React lists?**
+    - The `key` prop helps React identify which items have changed, added, or removed in a list. It's important for performance and reconciliation.
 
-12. **How do you optimize a React application for performance?**
-    - Optimization techniques include memoization, PureComponent, and minimizing the use of inline arrow functions in render methods. Lazy loading and code splitting can also reduce bundle size.
+12. **What is the significance of `shouldComponentUpdate`?**
+    - `shouldComponentUpdate` is a lifecycle method that allows you to control whether a component should re-render when its state or props change. 
 
-13. **Why are keys important in React lists?**
-    - Keys help React identify which items have changed, been added, or removed in lists. They are essential for efficient list rendering and preventing UI inconsistencies.
+13. **What are React Fragments?**
+    - Fragments allow you to group multiple elements without introducing extra nodes to the DOM. They help structure your components without adding additional divs or other elements.
 
-14. **Discuss the benefits and drawbacks of using class components in React.**
-    - Benefits of class components include access to lifecycle methods and clear separation of concerns. Drawbacks include verbosity and potential performance issues.
+14. **Explain React Router.**
+    - React Router is a popular library for routing in React applications. It allows you to create single-page applications with multiple views or pages.
 
-15. **Explain the role of the `setState` function in React, and how does it work?**
-    - `setState` is used to update the state of a component. It accepts a new state object or a function and schedules a re-render.
+15. **How do you handle forms in React?**
+    - You can manage form state with React state or state management libraries like Redux or the `useState` Hook. Use the `onChange` event handler to update the state as the user interacts with the form.
 
-16. **What are React keys, and why are they necessary when rendering lists?**
-    - React keys are unique identifiers for elements in lists, ensuring efficient list rendering and updates.
+16. **What are controlled and uncontrolled components in forms?**
+    - Controlled components have their state managed by React, while uncontrolled components store their state in the DOM and are accessed through references.
 
-17. **Explain the purpose of `React.Fragment` in React components.**
-    - `React.Fragment` is used to group multiple elements without introducing an extra DOM node. It is useful when rendering a list of elements or sibling components.
+17. **What is Redux, and how does it work with React?**
+    - Redux is a state management library. It allows you to manage the application's state in a predictable way and integrate it with React through the `react-redux` library.
 
-18. **What is the significance of server-side rendering (SSR) in React applications?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
+18. **Explain the concept of lazy loading in React.**
+    - Lazy loading is a technique where you load specific parts of your application only when they are needed, reducing the initial load time.
 
-19. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
+19. **What is context in React, and how is it used?**
+    - Context is a way to share data between components without having to explicitly pass props. It's useful for global state management.
 
-20. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
+20. **What is the purpose of the `useEffect` Hook?**
+    - The `useEffect` Hook is used for managing side effects in functional components. It can be used for tasks like data fetching, DOM manipulation, or subscribing to external events.
 
-21. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
 
-22. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
 
-23. **What is server-side rendering (SSR) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
 
-24. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
+21. **Explain the concept of "lifting state up" in React.**
+   - "Lifting state up" refers to the practice of moving the state that is shared between multiple components to a common ancestor (usually a parent component) to maintain a single source of truth.
 
-25. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
+22. **What are React Hooks, and how do they differ from class component lifecycle methods?**
+   - React Hooks are functions that allow functional components to manage state and side effects. They provide similar functionality to class component lifecycle methods but offer a more concise and readable way to manage component logic.
 
-26. **How do you
+23. **What is the purpose of the `useMemo` Hook in React?**
+   - `useMemo` is used for memoization, which helps in optimizing performance by memoizing the result of a function and returning the cached result when the inputs haven't changed.
 
- pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
+24. **What is the React context API, and when is it beneficial to use it?**
+   - The React context API allows you to share data across a component tree without explicitly passing props. It's useful for passing global data, such as themes or user authentication, to deeply nested components.
 
-27. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
+25. **Explain the significance of React keys in lists.**
+   - React keys are used to help React identify which elements in a list have changed, been added, or been removed. This is crucial for efficient rendering and reconciliation.
 
-28. **What is the role of a React reducer, and when is it used?**
-    - A reducer is a function that specifies how the application's state changes in response to actions. It is used in conjunction with the `useReducer` hook for managing complex state logic.
+26. **What is a controlled component, and why is it important in forms?**
+   - A controlled component is a form element whose value is controlled by React state. It's essential for handling form input and validation in a predictable way.
 
-29. **Discuss the importance of key-based reconciliation in React.**
-    - Key-based reconciliation helps React identify which items have changed in lists and efficiently update the DOM.
+27. **What are the advantages of using React Router over traditional routing solutions?**
+   - React Router provides a declarative way to define your application's routes, allowing you to create single-page applications with dynamic routing. It also provides in-depth navigation controls and a clean API for route management.
 
-30. **How can you prevent unnecessary re-renders in functional components?**
-    - Use `React.memo` for memoization and `useCallback` to memoize functions.
+28. **Explain the purpose of React's `StrictMode`.**
+   - `StrictMode` is a development mode that helps detect potential problems in a React application. It highlights unsafe lifecycles, warns about legacy string ref API usage, and more. It's mainly used for debugging and catching potential issues early.
 
-31. **Explain the role of the `dangerouslySetInnerHTML` prop in React.**
-    - `dangerouslySetInnerHTML` is used to insert HTML from a source directly into the component. It should be used with caution due to security risks.
+29. **What is the significance of the `key` prop in React and when should you use it?**
+   - The `key` prop is used to help React identify elements in a list and improve rendering performance. It should be provided to elements generated within a `map()` function and should be unique within the list.
 
-32. **What is the significance of the `React.StrictMode` component?**
-    - `React.StrictMode` is a wrapper component that helps identify and address potential problems in the application. It checks for common issues during development and doesn't affect the production build.
+30. **Explain the concept of code splitting in React and its benefits.**
+   - Code splitting is a technique for breaking down a large JavaScript bundle into smaller, more manageable chunks. It helps improve load times by loading only the code that's needed for the current page or feature, rather than everything at once.
 
-33. **What is the purpose of the `useContext` hook in React?**
-    - The `useContext` hook allows functional components to access context values provided by a higher-level `Context.Provider`.
 
-34. **What are stateful and stateless components in React?**
-    - Stateful components (class components) have internal state management, while stateless components (functional components) rely on props and have no internal state.
 
-35. **How do you handle errors in React applications?**
-    - Errors in React can be handled using error boundaries, `try...catch` blocks, and error handling libraries.
+31. **What is the purpose of the `useState` Hook in React?**
+   - The `useState` Hook is used to manage and update state in functional components. It allows you to add stateful logic to your components.
 
-36. **What is the significance of the `key` prop when rendering lists in React?**
-    - The `key` prop is used to provide a unique identifier to elements in dynamic lists, optimizing rendering and updates.
+32. **Explain the concept of conditional rendering in React.**
+   - Conditional rendering involves rendering different components or elements based on certain conditions or state values. You can achieve this using conditional statements or ternary operators.
 
-37. **Explain the concept of conditional rendering in React.**
-    - Conditional rendering in React is the practice of rendering components or elements based on conditions or data.
+33. **What is the React Router switch component, and why is it useful?**
+   - The `<Switch>` component is used to render only the first matching `<Route>` inside it. It helps prevent multiple route components from rendering simultaneously.
 
-38. **What are React hooks, and how do they change state management in functional components?**
-    - React hooks are functions that enable stateful logic and side effects in functional components. They simplify state management and make it possible to use state in functional components.
+34. **What are React Portals, and when would you use them?**
+   - React Portals allow you to render a child component into a DOM element that is outside the parent hierarchy. They are useful for creating overlays, modals, or tooltips that need to be positioned outside the normal flow of the DOM.
 
-39. **Discuss the benefits and drawbacks of using React in building large-scale applications.**
-    - Benefits of React in large-scale applications include component reusability, modular architecture, and performance optimizations. Drawbacks may include a learning curve, tooling decisions, and complex state management.
+35. **Explain the purpose of the `componentDidMount` and `componentDidUpdate` lifecycle methods in class components.**
+   - `componentDidMount` is invoked after a component has been added to the DOM, and `componentDidUpdate` is called after a component has been updated. They are often used for data fetching and DOM updates.
 
-40. **What is the purpose of the `useRef` hook in React?**
-    - The `useRef` hook is used for creating and accessing references to DOM elements and mutable values within functional components.
+36. **What is the role of the `key` prop when rendering lists in React?**
+   - The `key` prop is used to give each item in a list a unique identifier. It helps React efficiently update and re-render the list when items are added, removed, or reordered.
 
-41. **Explain the concept of prop types in React and how they are defined.**
-    - Prop types are used to validate the types of props passed to a component. They are defined using the `propTypes` property on the component.
+37. **How do you prevent unnecessary re-renders in functional components?**
+   - You can use the `React.memo` higher-order component or the `useMemo` Hook to memoize values and prevent re-renders when the component's props haven't changed.
 
-42. **What are controlled and uncontrolled forms in React?**
-    - Controlled forms have form elements whose values are controlled by React via state. Uncontrolled forms have form elements that manage their own state.
+38. **Explain the concept of PureComponent in React.**
+   - `PureComponent` is a class component that automatically performs a shallow comparison of its props and state to determine whether it should re-render. It can help optimize performance.
 
-43. **How do you implement routing in a React application without using React Router?**
-    - Manual routing can be implemented by handling URL changes and rendering components based on route matching.
+39. **What is error boundary in React, and how can you implement one?**
+   - An error boundary is a component that can catch JavaScript errors in its child component tree and display a fallback UI instead of crashing the whole application. You can create an error boundary by defining a component with the `componentDidCatch` lifecycle method.
 
-44. **Explain the concept of code splitting in React and its benefits.**
-    - Code splitting involves breaking the application into smaller bundles that are loaded on-demand. Benefits include a faster initial page load, reduced bundle size, and improved performance.
-
-45. **What is the role of a React reducer, and when is it used?**
-    - A reducer is a function that specifies how the application's state changes in response to actions. It is used in conjunction with the `useReducer` hook for managing complex state logic.
-
-46. **What are React keys, and why are they necessary when rendering lists?**
-    - React keys are unique identifiers for elements in lists, ensuring efficient list rendering and updates.
-
-47. **How can you prevent unnecessary re-renders in functional components?**
-    - Use `React.memo` for memoization and `useCallback` to memoize functions.
-
-48. **Explain the role of the `dangerouslySetInnerHTML` prop in React.**
-    - `dangerouslySetInnerHTML` is used to insert HTML from a source directly into the component. It should be used with caution due to security risks.
-
-49. **What is the significance of the `shouldComponentUpdate` method in class components?**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-50. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-51. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
-
-52. **What is server-side rendering (SS
-
-R) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
-
-53. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
-
-54. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-55. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-56. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
-
-57. **What is server-side rendering (SSR) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
-
-58. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
-
-59. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-60. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-61. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
-
-62. **What is server-side rendering (SSR) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
-
-63. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
-
-64. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-65. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-66. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
-
-67. **What is server-side rendering (SSR) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
-
-68. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
-
-69. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-70. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-71. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
-
-72. **What is server-side rendering (SSR) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
-
-73. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
-
-74. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-75. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-76. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
-
-77. **What is server-side rendering (SSR) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
-
-78. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
-
-79. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-80. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-81. **Explain the concept of portals in
-
- React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
-
-82. **What is server-side rendering (SSR) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
-
-83. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
-
-84. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-85. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-86. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
-
-87. **What is server-side rendering (SSR) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
-
-88. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
-
-89. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-90. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-91. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
-
-92. **What is server-side rendering (SSR) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
-
-93. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
-
-94. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-95. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-96. **Explain the concept of portals in React applications.**
-    - Portals allow rendering children into a DOM node outside of their parent component's DOM hierarchy, useful for modal dialogs and rendering outside the root DOM element.
-
-97. **What is server-side rendering (SSR) in React, and how does it work?**
-    - Server-side rendering (SSR) involves rendering React components on the server before sending the HTML to the client. It improves initial page load performance and SEO.
-
-98. **How does React handle security concerns, such as cross-site scripting (XSS)?**
-    - React uses techniques like escaping and sanitization to prevent XSS attacks. Developers should avoid using `dangerouslySetInnerHTML` and take security precautions.
-
-99. **Explain the significance of the `shouldComponentUpdate` method in class components.**
-    - `shouldComponentUpdate` allows you to control when a component should re-render, optimizing performance by avoiding unnecessary updates.
-
-100. **How do you pass data from a child to a parent component in React?**
-    - Data can be passed from a child to a parent using callback functions passed as props.
-
-These questions cover a wide range of React topics and should be helpful for your interview preparation.
+40. **What are fragments in React 16 and later, and why are they useful?**
+   - Fragments are a way to group multiple elements without introducing additional DOM elements. They help keep the DOM structure clean and efficient.
